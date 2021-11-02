@@ -1,0 +1,102 @@
+/*CSS file for Mobile devices such as tablets and phones. 
+* This file is focusing on the contactme.html file.
+*/
+/*Grid Assignment*/
+header {
+
+    grid-area: header;
+}
+
+nav {
+
+    grid-area: navigation;
+}
+
+main {
+
+    grid-area: content;
+}
+
+fieldset {
+
+    grid-area: form;
+}
+
+footer {
+    grid-area: footer;
+}
+/*@Media Screen Manipulation*/
+@media screen and (min-width: 400px)/*Small phones*/ {
+    body {
+        width: auto;
+        height: auto;
+    }
+    header {
+        width: auto;
+        vertical-align:middle;
+    
+    }
+    
+    main {
+        display: block;
+        grid-template-columns: 1px;
+        grid-template-rows: 1px;
+        grid-template-areas: 
+            "header"
+            "navigation"
+            "content"
+            "footer"
+            ;
+    }
+    
+    fieldset {
+        width: auto;
+    }
+    tr {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+
+@media screen and (min-width: 700px)/*Larger phones and tablets*/ {
+    body {
+       background-color: #F2D1E6;
+    }
+    main {
+        display: block;
+        grid-template-columns: 1px;
+        grid-template-rows: 1px;
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "content"
+        "footer"
+        ;
+    }
+        
+
+}
+
+@media screen and (min-width: 1200px)/*Laptops and Desktops*/  {
+    body {
+        background-color: #FFF0F5;
+    }
+    main{
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "content"
+        "footer"
+        ;
+        display:block;
+    }
+    fieldset {
+        margin: 5px;
+        border-radius: 30px;
+        width: 500px;
+        padding: 3px;
+        display: inline-block;
+        
+    }
+}

@@ -1,0 +1,57 @@
+<!--this page will show and allow others to get in contact with me via social media or email or phone.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="mobile" href="css/mobile.css">
+    <title>Contact Me</title>
+    <script src="/scripts/formvalidation.js"></script>
+</head>
+<body id="contactbg"> 
+    <header>
+        <h1>Reach Out</h1>
+    </header>
+    
+    <nav class="mainnav">
+        
+        <ul>
+            <a href="index.html"><li>Home Page</li></a>
+            <a href="portfolios.html"><li>Portfolio</li></a>
+            <a href="services.html"><li>Services</li></a>
+            <a href="about.html"><li>About Me</li></a>
+            <a href="#"><li class="active">Contact Me</li></a>
+            <a href="wireframes.html"><li>Wireframe</li></a>
+            <a href="selfreflection.html"><li>What I Learned</li></a>
+        </ul>
+    </nav>
+    
+    <main>
+        <form name="contact" action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="GET">
+            <section>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="firstname">*First Name:</label>
+                <input id="firstname" name="firstname" type="text" />
+                
+                <label for="lastname">*Last Name:</label>
+                <input id="lastname" name="lastname" type="text" />
+                
+                <label for="email">*Email:</label>
+                <input id="email" name="email" type="email"  placeholder="email@mail.com"/>
+                
+                <label for="phonenumber">Phone #:</label>
+                <input id="phonenumber" name="phonenumber"  type="tel" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                <br>
+                <label for="brief">Reason for reaching out:</label>
+                <input id="brief" name="brief" type="textarea" maxlength="60" cols="40" rows="5" placeholder="max 60 characters"/>
+            </fieldset> 
+            </section>
+            <input class="sendSize" type="submit" value="Send" onclick="return validateForm(document.contact)"/>
+        </form>
+    </main>
+    <footer id="footer">&copy; Copyright Tariq Moore 2021<a href="selfreflection.html">What I Learned</a></footer>
+</body>
+</html>
